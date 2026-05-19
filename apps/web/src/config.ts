@@ -29,18 +29,18 @@ export const appConfig: AppConfig = {
     adminController: "0x389cB8A4C506A68b8d1757de12A310C6efd981f9"
   },
   theme: {
-    bg: "#0d0b16",
-    surface: "rgba(23, 18, 37, 0.8)",
-    surfaceStrong: "rgba(29, 24, 44, 0.98)",
-    line: "rgba(255, 184, 255, 0.12)",
-    text: "#faf5ff",
-    muted: "#b5adc9",
-    accent: "#f7b8ff",
-    accentSoft: "rgba(247, 184, 255, 0.12)",
-    accentStrong: "#f48fff",
-    glowA: "rgba(244, 143, 255, 0.18)",
-    glowB: "rgba(110, 99, 255, 0.16)",
-    gradient: "linear-gradient(135deg, #f7b8ff 0%, #8ac8ff 100%)"
+    bg: "#101418",
+    surface: "rgba(18, 24, 28, 0.82)",
+    surfaceStrong: "rgba(20, 28, 33, 0.98)",
+    line: "rgba(139, 233, 204, 0.12)",
+    text: "#f6f5ef",
+    muted: "#b2b9b3",
+    accent: "#8be9cc",
+    accentSoft: "rgba(139, 233, 204, 0.12)",
+    accentStrong: "#52d6ad",
+    glowA: "rgba(82, 214, 173, 0.17)",
+    glowB: "rgba(225, 181, 126, 0.14)",
+    gradient: "linear-gradient(135deg, #8be9cc 0%, #e1b57e 100%)"
   },
   heroStats: [
     { label: "Cash buffer target", value: "20%" },

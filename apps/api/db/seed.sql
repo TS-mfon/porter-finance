@@ -74,6 +74,44 @@ values
   )
 on conflict (id) do nothing;
 
+insert into starter_workflows (id, title, summary, cta, thesis, signal_id)
+values
+  (
+    '50000000-0000-0000-0000-000000000001',
+    'Launch the idle stablecoin sweep',
+    'Start with a seeded Porter policy that protects cash buffers while moving idle stable liquidity into a low-volatility Mantle route.',
+    'Use this policy',
+    'Porter keeps 20% of the account liquid and routes the remaining idle stable balance into a conservative yield path. The policy is built for reliability first, upside second.',
+    '20000000-0000-0000-0000-000000000001'
+  ),
+  (
+    '50000000-0000-0000-0000-000000000002',
+    'Load the approval-gated rebalance',
+    'Open a seeded action plan that requires human approval before concentration risk is trimmed.',
+    'Load approval plan',
+    'This action is intentionally gated. Porter detected concentration drift and prepared the rebalance, but the final move should remain manually approved under the current risk profile.',
+    '20000000-0000-0000-0000-000000000002'
+  )
+on conflict (id) do nothing;
+
+insert into alert_rules (id, user_id, channel, condition, is_enabled)
+values
+  (
+    '60000000-0000-0000-0000-000000000001',
+    '00000000-0000-0000-0000-000000000002',
+    'telegram',
+    'Alert when idle cash exceeds the configured cash buffer by more than 15%.',
+    true
+  ),
+  (
+    '60000000-0000-0000-0000-000000000002',
+    '00000000-0000-0000-0000-000000000002',
+    'email',
+    'Notify when an approval-gated rebalance plan is ready for review.',
+    true
+  )
+on conflict (id) do nothing;
+
 insert into audit_logs (id, actor_email, action, target_type, target_id, reason)
 values
   (
